@@ -1,0 +1,19 @@
+{
+  "requiredFields": [
+    {
+      "key": "mrp",
+      "label": "Maximum Retail Price (MRP)",
+      "patterns": ["mrp", "m\\.r\\.p", "maximum retail price", "sales price", "rs\\.?\\s?\\d+", "\\u20b9\\s?\\d+"]
+    },
+    {
+      "key": "netQuantity",
+      "label": "Net Quantity",
+      "patterns": ["net qty", "net quantity", "net wt", "net weight", "\\d+\\s?(g|kg|ml|l|gm|gms)\\b"]
+    },
+    {
+      "key": "manufacturer",
+      "label": "Manufacturer / Packer Name",
+      "patterns": ["manufactured by", "marketed by", "packed by", "mfg\\.?\\s?by"]
+    }
+  ]
+}
