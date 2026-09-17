@@ -64,7 +64,7 @@ function ResultsScreen({ result, imageUrl, onReset }) {
               );
             })}
           </ul>
-                    <div className="mt-5 flex gap-3">
+                              <div className="mt-5 flex gap-3 no-print">
             <button
               onClick={() => handleVerify('confirmed')}
               disabled={decision !== null}
@@ -89,12 +89,14 @@ function ResultsScreen({ result, imageUrl, onReset }) {
         </div>
       </div>
 
-      <button
-        onClick={onReset}
-        className="mt-6 text-slate-400 hover:text-white underline"
-      >
-        Check another product
-      </button>
+            <div className="no-print flex gap-4 mt-6">
+        <button onClick={onReset} className="text-slate-400 hover:text-white underline">
+          Check another product
+        </button>
+        <button onClick={() => window.print()} className="text-blue-400 hover:text-blue-300 underline">
+          Download Report (PDF)
+        </button>
+      </div>
     </div>
   );
 }
